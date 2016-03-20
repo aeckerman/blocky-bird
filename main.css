@@ -7,6 +7,11 @@ body {
 	color: #fff;
 }
 
+#playing-as {
+	font-family: 'Press Start 2P', cursive;
+	color: #fff;
+}
+
 #gameDiv {
 	margin-right: auto;
 	margin-left: auto;
