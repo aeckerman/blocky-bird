@@ -6,7 +6,8 @@ var charSelect = function() {
 			'blocky',
 			'baldy',
 			'robby',
-			'cardy'
+			'cardy',
+			'ducky'
 		];
 
 		var ranint = Math.floor(Math.random()*characters.length);
@@ -27,8 +28,10 @@ var mainState = {
 		game.load.image('baldy', 'images/characters/baldy.png');
 		game.load.image('robby', 'images/characters/robby.png');
 		game.load.image('cardy', 'images/characters/cardy.png');
+		game.load.image('ducky', 'images/characters/ducky.png');
 
-		game.load.image('pipe', 'images/pipe.png')
+		game.load.image('pipe', 'images/pipe.png');
+		game.load.image('sky', 'images/sky.png');
 		game.load.audio('jump', 'sounds/jump.wav');
 		game.load.audio('theme', 'sounds/theme.mp3');
 
@@ -37,6 +40,8 @@ var mainState = {
 	create: function() {
 
 		game.physics.startSystem(Phaser.Physics.ARCADE);
+
+		game.add.sprite(0, 0, 'sky');
 
 		this.character = this.game.add.sprite(100, 245, charSelect());
 		game.physics.enable(this.character);
